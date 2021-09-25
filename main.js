@@ -20,10 +20,11 @@ function startclassifier(){
             document.getElementById("change").style.color="rgb("+random_number_r + ","+random_number_g+","+random_number_b+")";
             document.getElementById("Accura").style.color="rgb("+random_number_r + ","+random_number_g+","+random_number_b+")";
             
-            img1=document.getElementById("")
-            img2=document.getElementById("alien2")
-            img3=document.getElementById("alien3")
-            img4=document.getElementById("alien4")
+            img1=document.getElementById("background")
+            img2=document.getElementById("dog")
+            img3=document.getElementById("cat")
+            img4=document.getElementById("lion")
+            img5=document.getElementById("cow")
             
             if(result[0].label=="Barking"){
             img1.src="back.jpg"
