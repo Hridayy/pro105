@@ -1,11 +1,11 @@
-function startclassifier(){
+function Start(){
     navigator.mediaDevices.getUserMedia({audio: true});
     classifier= ml5.soundClassifier("https://teachablemachine.withgoogle.com/models/Azf1LJp5D/model.json",ModelReady)}
     
     function ModelReady(){
     classifier.classify(gotResults)}
 
-    function gotResults(){
+    function gotResults(results,error){
         if(error){
             console.log(error)
                 }
@@ -26,28 +26,28 @@ function startclassifier(){
             img4=document.getElementById("lion")
             img5=document.getElementById("cow")
             
-            if(result[0].label=="Barking"){
+            if(results[0].label=="Barking"){
             img1.src="back.jpg"
             img2.src="dog.gif"
             img3.src="cat.jpg"
             img4.src="lion.jpg"
             img5.src="cow.jpg"
             }
-            else if(result[0].label=="Meowing"){
+            else if(results[0].label=="Meowing"){
                 img1.src="back.jpg"
                 img2.src="dog.png"
                 img3.src="cat.gif"
                 img4.src="lion.jpg"
                 img5.src="cow.jpg"
                 }
-                else if(result[0].label=="Roaring"){
+                else if(results[0].label=="Roaring"){
                     img1.src="back.jpg"
                     img2.src="dog.png"
                     img3.src="cat.jpg"
                     img4.src="lion.gif"
                     img5.src="cow.jpg"
                     }
-                    else if(result[0].label=="Mooing"){
+                    else if(results[0].label=="mooing"){
                         img1.src="back.jpg"
                         img2.src="dog.png"
                         img3.src="cat.jpg"
